@@ -1,7 +1,7 @@
 /*!
 * Name of the project: Control a robot Pekee
-* @file TU_CRobotPekeeD.cpp
-* @brief unit tests of the class CRobotPekeeD
+* @file TU_CRobotPekeeLedOn.cpp
+* @brief unit tests of the class CRobotPekeeLedOn
 * @version : 1.0
 * @author Baptiste CASSAN
 * @date creation 03/11/2026
@@ -10,22 +10,22 @@
 #include <iostream>
 using namespace std;
 
-#include "..\includes\CRobotPekeeD.h"
+#include "..\includes\CRobotPekeeLedOn.h"
 
 /*!
 * @fn main
-* @brief connects the robot CRobotPekeeD and tests its methods
+* @brief connects the robot CRobotPekeeLedOn and tests its methods
 * @return 0
 *
 */
 int main(void)
 {
-	int vitesse;    // vitesse de croisiere
+	int vitesse;    // vitesse de translation
 	float distance; // distance a parcourir
 	int rep;        // choix dans le menu
 
 	// Creation du robot et connexion au robot simule
-	CRobotPekeeD robot("Pekee", "localhost", 0.3, 0.2);
+	CRobotPekeeLedOn robot("Pekee", "localhost");
 
 	if (robot.estConnecte())
 	{
