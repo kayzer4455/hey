@@ -35,6 +35,44 @@ CRobotPekeeLedOn::~CRobotPekeeLedOn(void)
 
 /*!
 * @fn avancer
+* @brief Moves the robot forward with the led on.
+* The led is switched off at the end of the move.
+*
+*/
+void CRobotPekeeLedOn::avancer()
+{
+	// on allume la led
+	this->LedOn();
+
+	// on avance avec la methode de la classe mere
+	CRobotPekee::avancer();
+	this->SetSpeed(0, 0);
+
+	// on eteint la led a la fin du deplacement
+	this->LedOff();
+}
+
+/*!
+* @fn reculer
+* @brief Moves the robot backward with the led on.
+* The led is switched off at the end of the move.
+*
+*/
+void CRobotPekeeLedOn::reculer()
+{
+	// on allume la led
+	this->LedOn();
+
+	// on recule avec la methode de la classe mere
+	CRobotPekee::reculer();
+	this->SetSpeed(0, 0);
+
+	// on eteint la led a la fin du deplacement
+	this->LedOff();
+}
+
+/*!
+* @fn avancer
 * @brief Moves the robot forward over a distance with the led on.
 * The led is switched off at the end of the move.
 * @param[in] distance : distance to travel

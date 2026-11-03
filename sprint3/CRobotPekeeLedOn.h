@@ -37,6 +37,22 @@ CRobotPekeeLedOn(string un_nom, string une_adrIP);
 
 /*!
 * @fn avancer
+* @brief Moves the robot forward with the led on.
+* The led is switched off at the end of the move.
+*
+*/
+void avancer();
+
+/*!
+* @fn reculer
+* @brief Moves the robot backward with the led on.
+* The led is switched off at the end of the move.
+*
+*/
+void reculer();
+
+/*!
+* @fn avancer
 * @brief Moves the robot forward over a distance with the led on.
 * The led is switched off at the end of the move.
 * @param[in] distance : distance to travel

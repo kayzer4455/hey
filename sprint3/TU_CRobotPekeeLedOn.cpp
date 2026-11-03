@@ -37,15 +37,25 @@ int main(void)
 			cout << "**************************" << endl << endl;
 
 			cout << "Que doit faire le robot ?" << endl;
-			cout << "1 - Avancer sur une distance" << endl;
-			cout << "2 - Reculer sur une distance" << endl;
+			cout << "1 - Avancer" << endl;
+			cout << "2 - Reculer" << endl;
+			cout << "3 - Avancer sur une distance" << endl;
+			cout << "4 - Reculer sur une distance" << endl;
 			cout << "0 - Fin commande du robot" << endl;
 
 			cin >> rep;
 
 			switch (rep)
 			{
-			case 1: // AVANCER sur une distance
+			case 1: // AVANCER
+				robot.avancer();
+				break;
+
+			case 2: // RECULER
+				robot.reculer();
+				break;
+
+			case 3: // AVANCER sur une distance
 				cout << "Quelle distance ? ";
 				cin >> distance;
 				cout << "Quelle vitesse ? ";
@@ -53,7 +63,7 @@ int main(void)
 				robot.avancer(distance, vitesse);
 				break;
 
-			case 2: // RECULER sur une distance
+			case 4: // RECULER sur une distance
 				cout << "Quelle distance ? ";
 				cin >> distance;
 				cout << "Quelle vitesse ? ";
